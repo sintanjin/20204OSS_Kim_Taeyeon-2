@@ -84,15 +84,15 @@
             
             <br>
             <p>first name</p>
-            <input type="text" class="name" name="first_name" id="first_name" placeholder="first name" required>
+            <input type="text" class="name" name="first_name" id="first_name" pattern="[A-Za-z]+" placeholder="2 alphabet or more">
             <br>
             <p>last name</p>
-            <input type="text" class="name" name="last_name" id="last_name"placeholder="last name" required>
+            <input type="text" class="name" name="last_name" id="last_name" pattern="[A-Za-z]+" placeholder="2 alphabet or more">
             <br>
             <p>birth</p>
-            <input type="date" id="birth" name="date" required>
+            <input type="date" id="birth" name="date">
             <p>email</p>
-            <input type="text" id="first_email" class="email" name="first_email"placeholder="email" required>
+            <input type="text" id="first_email" class="email" name="first_email"placeholder="email">
             <span>@</span>
             <select class="email" name="email">
                 <option value="gamil">gmail.com</option>
@@ -106,10 +106,10 @@
                 <option value="best_friend">who is yout best friend?</option>
             </select>
             <br>
-            <textarea name="optional" cols=30 rows=3></textarea>
+            <textarea id="optional" name="optional" cols=30 rows=3></textarea>
             
             <br>
-            <input id="submit" type="submit" value="confirm">
+            <input id="submit" type="submit" value="confirm" onclick="confirm()">
             
         </form>
     </div>
