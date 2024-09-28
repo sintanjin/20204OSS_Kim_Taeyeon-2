@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <img src="arsenal.png" width="40" height="40">
+            <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> -->
+            <span class="fs-4">Arsenal Player</span>
+          </a>
+          
+        </header>
+    </div>
+    <form class="needs-validation" novalidate>
+        <div class="container">
+            <div class="col-sm-6">
+                <label for="uniform" class="form-label">Uniform Number</label>
+                <input type="" class="form-control" id="uniform" placeholder="" value="2" required>
+                <div class="invalid-feedback">
+                  Valid uniform number is required.
+                </div>
+            </div>
+            <br>
+            <div class="col-sm-6">
+                <label for="country" class="form-label">Country</label>
+                <input type="text" class="form-control" id="country" placeholder="" value="France" required>
+                <div class="invalid-feedback">
+                  Valid country is required.
+                </div>
+            </div>
+            <br>
+            <div class="col-sm-6">
+                <label for="position" class="form-label">Position</label>
+                <select class="form-select" id="position" required>
+                    <option>FW</option>
+                    <option>MF</option>
+                    <option selected>DF</option>
+                    <option>GK</option>
+                </select>
+                <div class="invalid-feedback">
+                    Valid position is required.
+                </div>
+            </div>
+            <br>
+            <div class="col-sm-6">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="" value="William Saliba" required>
+                <div class="invalid-feedback">
+                  Valid name is required.
+                </div>
+            </div>
+            <br>
+            <div class="col-sm-6">
+                <label for="birth" class="form-label">Birth</label>
+                <input type="date" class="form-control" id="birth" placeholder="" value="2001-03-24" required>
+                <div class="invalid-feedback">
+                  Valid birth is required.
+                </div>
+            </div>
+            <br>
+            <div class="col-sm-6">
+                <label for="height" class="form-label">Height</label>
+                <input type="number" class="form-control" id="height" placeholder="" value="192" required>
+                <div class="invalid-feedback">
+                  Valid height is required.
+                </div>
+            </div>
+            <br>
+            <div class="col-sm-6">
+                <label for="expiration" class="form-label">Contract Expiration Date</label>
+                <select class="form-select" id="expiration" required>
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                    <option selected>2027</option>
+                    <option>2028</option>
+                    <option>2029</option>
+                    <option>2030</option>
+                </select>
+                <div class="invalid-feedback">
+                    Valid contract expiration date is required.
+                </div>
+            </div>
+        </div>
+        
+    
+        
+        <div class="container">
+            <hr class="my-4">
+            <a href="index.html">
+                <button class="btn btn-secondary" type="button">취소</button>
+            </a>
+            
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-primary btn-lg me-md-2" type="submit">확인</button>
+            </div>  
+        </div>
+    </form>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Arsenal, Inc</span>
+          </div>
+        </footer>
+      </div>
+    <script>
+        (() => {
+            'use strict'
+          
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+          
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+              form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                  event.preventDefault()
+                  event.stopPropagation()
+                }
+                else{
+                    if(confirm("게시물을 수정할까요?")){
+                        alert("수정되었습니다.");
+                    }
+                    else{
+                        alert("취소되었습니다.")
+                    }
+                }
+          
+                form.classList.add('was-validated')
+              }, false)
+            })
+          })()
+      </script>
+</body>
+</html>

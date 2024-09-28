@@ -1,0 +1,27 @@
+.table{
+    text-align: center;
+}
+.nav-link{
+    color : red;
+}
+.nav-link:hover{
+    color : white;
+    background-color: red;
+}
+@media all and (min-width:768px) and (max-width:1023px){
+    .table{
+        font-size  : 20px;
+    }
+}
+@media all and (min-width:480px) and (max-width:767px) {
+    .table{
+        font-size  : 15px;
+    }
+} 
+
+@media all and (max-width:479px) {
+    .table{
+        font-size  : 10px;
+    }
+}
+  
